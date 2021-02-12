@@ -1897,7 +1897,11 @@ lwip_selscan(int maxfdp1, fd_set *readset_in, fd_set *writeset_in, fd_set *excep
     if (sock != NULL) {
       void *lastdata = sock->lastdata.pbuf;
       s16_t rcvevent = sock->rcvevent;
+<<<<<<< HEAD
       u16_t sendevent = sock->conn->pcb.tcp->snd_buf;
+=======
+      u16_t sendevent = sock->sendevent;
+>>>>>>> upstream/master
       u16_t errevent = sock->errevent;
       SYS_ARCH_UNPROTECT(lev);
 
